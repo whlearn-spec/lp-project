@@ -1,43 +1,18 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background-color: #ffffff;
-    color: #333;
-}
-.hero {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
-}
-.hero-img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
+body { margin: 0; padding: 0; font-family: sans-serif; text-align: center; }
+.hero { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 60px 20px; }
+.hero-img { width: 100%; max-width: 500px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 .btn {
-    display: inline-block;
-    background-color: #ffc107;
-    color: #000;
-    padding: 20px 40px;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    /* ★アニメーションの指定★ */
+    display: inline-block; background-color: #ffc107; color: #000; padding: 20px 40px;
+    text-decoration: none; border-radius: 50px; font-weight: bold; margin-top: 20px;
     animation: fuwafuwa 3s infinite ease-in-out;
+    transition: all 0.3s ease; /* ★変化をなめらかにする魔法★ */
 }
-
-/* ★ふわふわ動く魔法の指示（キーフレーム）★ */
+/* ★マウスを乗せた時の動き★ */
+.btn:hover {
+    background-color: #ffdb58; /* 少し明るい黄色に */
+    transform: scale(1.1);    /* 1.1倍に大きく */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
 @keyframes fuwafuwa {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
