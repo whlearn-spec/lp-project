@@ -11,7 +11,27 @@
         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="PCの画像" class="hero-img">
         <h1>祝！世界公開成功！</h1>
         <p>WSLとGitを使いこなし、ついに画像とアニメーションまで到達しました。</p>
-        <a href="#" class="btn">今すぐ詳細をチェック</a>
+        <a href="#contact" class="btn">今すぐ詳細をチェック</a>
     </div>
+
+    <section class="contact" id="contact">
+        <h2>お問い合わせ</h2>
+        <p class="contact-lead">ご質問・ご相談はお気軽にどうぞ。</p>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">お名前</label>
+                <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+            </div>
+            <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">メッセージ</label>
+                <textarea id="message" name="message" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">送信する</button>
+        </form>
+    </section>
 </body>
 </html>
