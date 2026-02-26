@@ -3,7 +3,7 @@ Vanilla HTML / CSS で構築するシンプルなランディングページ（L
 
 ## 技術スタック
 - HTML5
-- CSS3 (style.css に分離して記述。インラインスタイルは非推奨)
+- CSS3 (css/style.css に配置する。インラインスタイルは非推奨)
 
 ## 開発・Git運用ルール（※超重要）
 - 環境: WSL (Linux) 上で開発している。
