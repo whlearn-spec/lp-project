@@ -14,6 +14,65 @@
         <a href="#contact" class="btn">今すぐ詳細をチェック</a>
     </div>
 
+    <!-- よくある質問セクション -->
+    <section class="faq" id="faq">
+        <h2>よくある質問（FAQ）</h2>
+        <p class="faq-lead">よくいただくご質問をまとめました。</p>
+        <div class="faq-list">
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>このサービスはどのような方向けですか？</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>プログラミング初心者からWebエンジニアを目指す方まで、幅広くご活用いただけます。事前知識は不要です。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>無料で利用できますか？</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>基本的な機能は無料でお試しいただけます。有料プランの詳細については、お問い合わせフォームよりお気軽にご連絡ください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>どれくらいで成果が出ますか？</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>個人差はありますが、多くの方が1ヶ月以内に最初の成果を実感されています。継続的なサポートで着実にステップアップできます。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>サポート体制はどうなっていますか？</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>メールおよびチャットにて、平日9時〜18時の間、専任スタッフが対応いたします。お気軽にご相談ください。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    <span>途中でやめることはできますか？</span>
+                    <span class="faq-icon">＋</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>いつでもキャンセル・解約が可能です。縛りは一切ありませんので、安心してお試しください。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <h2>お問い合わせ</h2>
         <p class="contact-lead">ご質問・ご相談はお気軽にどうぞ。</p>
@@ -33,5 +92,29 @@
             <button type="submit" class="btn btn-submit">送信する</button>
         </form>
     </section>
+
+    <script>
+        /* FAQ アコーディオン */
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.parentElement;
+                var isOpen = item.classList.contains('is-open');
+
+                /* 他の開いているアイテムをすべて閉じる */
+                document.querySelectorAll('.faq-item.is-open').forEach(function(el) {
+                    el.classList.remove('is-open');
+                    el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    el.querySelector('.faq-answer').setAttribute('aria-hidden', 'true');
+                });
+
+                /* クリックした項目をトグル */
+                if (!isOpen) {
+                    item.classList.add('is-open');
+                    btn.setAttribute('aria-expanded', 'true');
+                    item.querySelector('.faq-answer').setAttribute('aria-hidden', 'false');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
